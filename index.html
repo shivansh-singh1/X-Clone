@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X</title>
+    <link rel="stylesheet" href="output.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="main flex flex-col bg-black h-screen m-0 p-0 sm:flex sm:flex-row">
+        <nav class="flex navbar justify-between pt-5 sm:pt-10 sm:flex-col sm:pl-24 sm:justify-normal sm:gap-7 px-3">
+            <div id="profile" class="profile sm:hidden">
+                <div id="hamburger" class="hamburger text-white text-3xl cursor-pointer">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div id="Xmark" class="Xmark text-white text-4xl cursor-pointer hidden">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div id="drawer"
+                    class="drawer hidden left-0 mt-2 w-[70vw] h-[91.4vh] bg-black absolute pl-5 pt-7 border-2 border-neutral-950">
+                    <div class="sidebar flex flex-col gap-3">
+                        <div class="home sidebar-props">
+                            <i class="fa-solid fa-house text-white text-2xl"></i>
+                            <div class="text text-white text-1xl font-medium">Home</div>
+                        </div>
+                        <div class="explore sidebar-props">
+                            <i class="fa-solid fa-magnifying-glass text-white text-2xl"></i>
+                            <div class="text text-white text-1xl font-medium">Explore</div>
+                        </div>
+                        <div class="grok sidebar-props -ml-1">
+                            <svg viewBox="0 0 33 32" aria-hidden="true"
+                                class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e fill-white h-8">
+                                <g>
+                                    <path
+                                        d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38 1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83 1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324 3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227 3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263 1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448 9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41 2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22 8.364C1.49 30.2.666 31.074 0 32l10.478-9.466">
+                                    </path>
+                                </g>
+                            </svg>
+
+                            <div class="text text-white text-1xl font-medium">Grok</div>
+
+                        </div>
+                        <div class="communities sidebar-props">
+                            <i class="fa-solid fa-user-group text-white text-2xl"></i>
+                            <div class="text text-white text-1xl font-medium">Communities</div>
+                        </div>
+                        <div class="notifications sidebar-props">
+                            <i class="fa-solid fa-bell text-white text-2xl"></i>
+                            <div class="text text-white text-1xl font-medium">Notifications</div>
+                        </div>
+                        <div class="messages sidebar-props">
+                            <i class="fa-solid fa-envelope text-white text-2xl"></i>
+                            <div class="text text-white text-1xl font-medium">Messages</div>
+                        </div>
+                        <div
+                            class="Post flex bg-white justify-center items-center rounded-full h-11 w-35 cursor-pointer ml-2 mt-3 hover:bg-gray-200">
+                            <div class="text text-black text-1xl font-bold">Post</div>
+                        </div>
+                        <div
+                            class="profilePC flex mt-5 gap-5 h-15hover:bg-neutral-900 cursor-pointer justify-center items-center rounded-full p-5">
+                            <i
+                                class="fa-solid fa-circle-user flex text-black bg-white rounded-full text-3xl h-7.5 w-7.5 cursor-pointer"></i>
+                            <div class="nameNuser flex flex-col">
+                                <div class="name text-white text-1xl font-medium font-mono">Yashwant Kumar Rai</div>
+                                <div class="user text-white text-1xl font-extralight">yashwant7.siuu</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="Xlogo cursor-pointer sm:rounded-full sm:h-15 sm:w-15 hover:bg-neutral-900 sm:flex sm:justify-center sm:items-center sm:ml-8.5">
+                <svg viewBox="0 0 24 24" aria-hidden="true"
+                    class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao33i r-16y2uox r-8kz0gk fill-white h-8">
+                    <g>
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                        </path>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- Right Sidebar -->
+
+            <div id="trending" class="trending sm:hidden">
+                <i class="fa-solid fa-bolt text-white text-3xl cursor-pointer"></i>
+            </div>
+
+            <div id="Xmark2" class="Xmark2 text-white text-4xl cursor-pointer hidden  sm:hidden">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+            <div id="drawerRight"
+                class="drawerRight hidden right-0 mt-12 w-[70vw] h-[91.4vh] bg-black absolute pl-5 pt-7 border-2 border-neutral-950 sm:hidden gap-7">
+                <div
+                    class="trendingContainer flex flex-col border-1 border-gray-600 h-fit w-fit pt-5 rounded-2xl justify-center pl-5 gap-4 pb-3 pr-4 ">
+                    <h1 class="text-lg font-bold text-white">What's happening</h1>
+                    <ul class="flex flex-col gap-1">
+                        <li class="w-fit hover:bg-neutral-900 cursor-pointer px-3 py-1 rounded-3xl">
+                            <div class="title text-white text-base font-medium">#Cristinao Ronaldo</div>
+                            <div class="postsCount text-white font-extralight text-sm">77k posts</div>
+                        </li>
+
+                        <li class="w-fit hover:bg-neutral-900 cursor-pointer px-3 py-1 rounded-3xl">
+                            <div class="title text-white font-medium">#Charlie Kirk</div>
+                            <div class="postsCount text-white font-extralight text-sm">17k posts</div>
+                        </li>
+
+                        <li class="w-fit hover:bg-neutral-900 cursor-pointer px-3 py-1 rounded-3xl">
+                            <div class="title text-white font-medium">#Trump</div>
+                            <div class="postsCount text-white font-extralight text-sm">12k posts</div>
+                        </li>
+
+                        <li class="w-fit hover:bg-neutral-900 cursor-pointer px-3 py-1 rounded-3xl">
+                            <div class="title text-white font-medium">#CIA</div>
+                            <div class="postsCount text-white font-extralight text-sm">10k posts</div>
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class="followContainer flex flex-col border-1 border-gray-600 h-fit w-[50vw] p-2 rounded-2xl justify-center gap-4">
+                    <h1 class="text-lg font-bold text-white pl-3">Who to follow</h1>
+                    <ul class="flex flex-col gap-1">
+                        <li
+                            class="flex flex-row hover:bg-neutral-900 cursor-pointer px-3 py-1 rounded-lg justify-between w-[45vw]">
+                            <div class="title text-white text-base font-medium">Cristiano Ronaldo</div>
+                            <div id="followBtn"
+                                class="followBtn text-black text-sm font-bold w-fit h-fit px-3 py-1 bg-white rounded-full hover:bg-neutral-200 cursor-pointer">
+                                Follow</div>
+
+                            <div id="unfollowBtn"
+                                class="hidden unfollowBtn text-black text-sm font-semibold w-fit px-3 py-1 bg-white rounded-full hover:bg-red-400/50 hover:text-red-500 hover:border-1 hover:border-red-500 cursor-pointer h-fit">
+                                Unfollow</div>
+                        </li>
+
+                        <li
+                            class="flex flex-row justify-between w-[45vw] hover:bg-neutral-900 cursor-pointer px-3 py-1 rounded-lg">
+                            <div class="title text-white font-medium">Charlie Kirk</div>
+                            <div id="followBtn"
+                                class="followBtn text-black text-sm font-bold w-fit px-3 py-1 bg-white rounded-full hover:bg-neutral-200 cursor-pointer h-fit">
+                                Follow</div>
+
+                            <div id="unfollowBtn"
+                                class="hidden unfollowBtn text-black text-sm font-semibold w-fit px-3 py-1 bg-white rounded-full hover:bg-red-400/50 hover:text-red-500 hover:border-1 hover:border-red-500 cursor-pointer h-fit">
+                                Unfollow</div>
+                        </li>
+
+                        <li
+                            class="flex flex-row justify-between w-[45vw] hover:bg-neutral-900 cursor-pointer px-3 py-1 rounded-lg">
+                            <div class="title text-white font-medium">Trump</div>
+                            <div id="followBtn"
+                                class="followBtn text-black text-sm font-bold w-fit px-3 py-1 bg-white rounded-full hover:bg-neutral-200 cursor-pointer h-fit">
+                                Follow</div>
+
+                            <div id="unfollowBtn"
+                                class="hidden unfollowBtn text-black text-sm font-semibold w-fit px-3 py-1 bg-white rounded-full hover:bg-red-400/50 hover:text-red-500 hover:border-1 hover:border-red-500 cursor-pointer h-fit">
+                                Unfollow</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footers flex flex-col gap-1">
+                    <ul class="flex text-white gap-2 text-[7px]">
+                        <li class="cursor-pointer hover:underline">
+                            Terms of Service
+                        </li>
+                        <li>|</li>
+                        <li class="cursor-pointer hover:underline">
+                            Privacy Policy
+                        </li>
+                        <li>|</li>
+                        <li class="cursor-pointer hover:underline">
+                            Cookie Policy
+                        </li>
+                    </ul>
+                    <ul class="flex text-white gap-2 text-[7px]">
+                        <li class="cursor-pointer hover:underline">Accessibility</li>
+                        <li>|</li>
+                        <li class="cursor-pointer hover:underline">Ads info</li>
+                        <li>|</li>
+                        <li class="cursor-pointer hover:underline">More</li>
+                        <li>|</li>
+                        <li class="">© 2025 X Corp.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- For Sidebar -->
+            <div class="sidebar hidden sm:flex sm:flex-col sm:gap-3 sm:pl-7">
+                <div class="home sidebar-props">
+                    <i class="fa-solid fa-house text-white text-2xl"></i>
+                    <div class="text text-white text-1xl font-medium">Home</div>
+                </div>
+                <div class="explore sidebar-props">
+                    <i class="fa-solid fa-magnifying-glass text-white text-2xl"></i>
+                    <div class="text text-white text-1xl font-medium">Explore</div>
+                </div>
+                <div class="grok sidebar-props -ml-1">
+                    <svg viewBox="0 0 33 32" aria-hidden="true"
+                        class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e fill-white h-8">
+                        <g>
+                            <path
+                                d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38 1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83 1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324 3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227 3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263 1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448 9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41 2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22 8.364C1.49 30.2.666 31.074 0 32l10.478-9.466">
+                            </path>
+                        </g>
+                    </svg>
+
+                    <div class="text text-white text-1xl font-medium">Grok</div>
+
+                </div>
+                <div class="communities sidebar-props">
+                    <i class="fa-solid fa-user-group text-white text-2xl"></i>
+                    <div class="text text-white text-1xl font-medium">Communities</div>
+                </div>
+                <div class="notifications sidebar-props">
+                    <i class="fa-solid fa-bell text-white text-2xl"></i>
+                    <div class="text text-white text-1xl font-medium">Notifications</div>
+                </div>
+                <div class="messages sidebar-props">
+                    <i class="fa-solid fa-envelope text-white text-2xl"></i>
+                    <div class="text text-white text-1xl font-medium">Messages</div>
+                </div>
+                <div
+                    class="Post flex bg-white justify-center items-center rounded-full h-11 w-35 cursor-pointer ml-2 mt-3 hover:bg-gray-200">
+                    <div class="text text-black text-1xl font-bold">Post</div>
+                </div>
+                <div
+                    class="profilePC hidden sm:flex sm:mt-5 sm:gap-5 sm:h-15 sm:hover:bg-neutral-900 cursor-pointer sm:justify-center items-center rounded-full p-5">
+                    <i
+                        class="fa-solid fa-circle-user flex text-black bg-white rounded-full text-3xl h-7.5 w-7.5 cursor-pointer"></i>
+                    <div class="nameNuser flex flex-col">
+                        <div class="name text-white text-1xl font-medium font-mono">Yashwant Kumar Rai</div>
+                        <div class="user text-white text-1xl font-extralight">yashwant7.siuu</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="hidden w-px h-screen bg-gray-600 ml-5 sm:block"></div>
+        <main id="tweets" class="tweets sm:w-[45vw] overflow-auto [scrollbar-width:none] pt-2">
+            <div id="writePosts" class="writePosts flex flex-col h-fit border-b-1 border-gray-600 p-3">
+                <div class="postContent flex gap-5 items-center">
+                    <i
+                        class="fa-solid fa-circle-user flex text-black bg-white rounded-full text-5xl h-12 w-12 cursor-pointer"></i>
+                    <textarea id="ContentInput" placeholder="What's happening?"
+                        class="text-white h-10 w-full resize-none focus:outline-none placeholder-gray-400"></textarea>
+                </div>
+                <div id="mediaPreview" class="mediaPreview mt-2 pl-[54px]"></div>
+                <div class="attachmentsnPostBtn flex justify-between items-center p-3">
+                    <input id="mediaUpload" type="file" accept="image/*,video/*"class="hidden">
+                    <i id="mediaBtn" class="fa-solid fa-image text-sky-400 cursor-pointer pl-[54px]"></i>
+                    <div id="postBtn" class="postBtn text-black font-bold bg-white rounded-2xl p-2 cursor-pointer">Post
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col demoTweet1 h-fit border-b-1 border-gray-600 p-3">
+                <div class="header flex w-[inherit] gap-3 items-center">
+                    <img src="https://pbs.twimg.com/profile_images/1936002956333080576/kqqe2iWO_400x400.jpg" alt="pfp"
+                        width="40" height="40" class="rounded-full">
+                    <div class="name text-white font-semibold">Elon Musk</div>
+                    <div class="username text-xs text-neutral-300">@elonmusk</div>
+                    <div class="dot text-xs text-neutral-300">·</div>
+                    <div class="TimeAgo text-xs text-neutral-300">17 h</div>
+                </div>
+                <div class="mainContent text-white pl-[54px]">
+                    The shot looked really bad, but I sure hope Charlie makes it somehow
+                </div>
+                <div class="footer flex gap-17 sm:gap-37 text-neutral-300/50 text-[14px] pl-[54px] mt-4">
+                    <i class="fa-solid fa-heart cursor-pointer hover:bg-pink-600/50 p-1 rounded-lg"></i>
+                    <i
+                        class="fa-solid fa-comment cursor-pointer hover:bg-[#6bc278] hover:text-black p-1 rounded-lg"></i>
+                    <i
+                        class="fa-solid fa-arrows-turn-to-dots cursor-pointer hover:bg-[#6bc278] hover:text-black p-1 rounded-lg"></i>
+                    <i class="fa-solid fa-eye cursor-pointer hover:bg-[#6bc278] hover:text-black p-1 rounded-lg"></i>
+                </div>
+            </div>
+
+
+            <div class="flex flex-col demoTweet2 h-fit border-b-1 border-gray-600 p-3">
+                <div class="header flex w-[inherit] gap-3 items-center">
+                    <img src="https://pbs.twimg.com/profile_images/1921477541690261504/NshCvNsg_400x400.jpg" alt="pfp"
+                        width="40" height="40" class="rounded-full">
+                    <div class="name text-white font-semibold">Viran</div>
+                    <div class="username text-xs text-neutral-300">@MadnessFc24</div>
+                    <div class="dot text-xs text-neutral-300">·</div>
+                    <div class="TimeAgo text-xs text-neutral-300">17 h</div>
+                </div>
+                <div class="mainContent flex flex-col text-white pl-[54px] gap-2">
+                    Phil Foden is mocking the death of Charlie Kirk with this celebration, please arrest him
+                    <img src="https://pbs.twimg.com/media/G00YCbbaoAAbnpk?format=jpg&name=small" alt="stats"
+                        class="max-h-[25vh] max-w-[77vw] sm:max-w-[35vw] sm:max-h-[45vh] object-contain rounded-2xl border-1 border-gray-600">
+                </div>
+
+                <div class="footer flex gap-17 sm:gap-37 text-neutral-300/50 text-[14px] pl-[54px] mt-4">
+                    <i class="fa-solid fa-heart cursor-pointer hover:bg-pink-600/50 p-1 rounded-lg"></i>
+                    <i
+                        class="fa-solid fa-comment cursor-pointer hover:bg-[#6bc278] hover:text-black p-1 rounded-lg"></i>
+                    <i
+                        class="fa-solid fa-arrows-turn-to-dots cursor-pointer hover:bg-[#6bc278] hover:text-black p-1 rounded-lg"></i>
+                    <i class="fa-solid fa-eye cursor-pointer hover:bg-[#6bc278] hover:text-black p-1 rounded-lg"></i>
+                </div>
+            </div>
+
+
+            <div class="flex flex-col demoTweet3 h-fit border-b-1 border-gray-600 p-3">
+                <div class="header flex w-[inherit] gap-3 items-center">
+                    <img src="https://pbs.twimg.com/profile_images/1958992568005369856/BGSLOCeH_400x400.jpg" alt="pfp"
+                        width="40" height="40" class="rounded-full">
+                    <div class="name text-white font-semibold">Hassan</div>
+                    <div class="username text-xs text-neutral-300">@Hassan7FootballIQ</div>
+                    <div class="dot text-xs text-neutral-300">·</div>
+                    <div class="TimeAgo text-xs text-neutral-300">17 h</div>
+                </div>
+                <div class="mainContent flex flex-col text-white pl-[54px] gap-2">
+                    They will give Burnley a red card once they realize Liverpool is not going to win. Just wait...
+                </div>
+
+                <div class="footer flex gap-17 sm:gap-37 text-neutral-300/50 text-[14px] pl-[54px] mt-4">
+                    <i class="fa-solid fa-heart cursor-pointer hover:bg-pink-600/50 p-1 rounded-lg"></i>
+                    <i
+                        class="fa-solid fa-comment cursor-pointer hover:bg-[#6bc278] hover:text-black p-1 rounded-lg"></i>
+                    <i
+                        class="fa-solid fa-arrows-turn-to-dots cursor-pointer hover:bg-[#6bc278] hover:text-black p-1 rounded-lg"></i>
+                    <i class="fa-solid fa-eye cursor-pointer hover:bg-[#6bc278] hover:text-black p-1 rounded-lg"></i>
+                </div>
+            </div>
+        </main>
+        <div class="hidden w-px h-screen bg-gray-600 sm:block"></div>
+        <div class="right hidden sm:flex sm:flex-col scroll-auto w-[25vw] justify-center items-center gap-10">
+            <div
+                class="trendingContainer flex flex-col border-1 border-gray-600 h-[48vh] w-[20vw] pt-2 rounded-2xl justify-center pl-5 gap-4">
+                <h1 class="text-lg font-bold text-white">What's happening</h1>
+                <ul class="flex flex-col gap-1">
+                    <li class="w-fit hover:bg-neutral-900 cursor-pointer px-3 py-1 rounded-3xl">
+                        <div class="title text-white text-base font-medium">#Cristinao Ronaldo</div>
+                        <div class="postsCount text-white font-extralight text-sm">77k posts</div>
+                    </li>
+
+                    <li class="w-fit hover:bg-neutral-900 cursor-pointer px-3 py-1 rounded-3xl">
+                        <div class="title text-white font-medium">#Charlie Kirk</div>
+                        <div class="postsCount text-white font-extralight text-sm">17k posts</div>
+                    </li>
+
+                    <li class="w-fit hover:bg-neutral-900 cursor-pointer px-3 py-1 rounded-3xl">
+                        <div class="title text-white font-medium">#Trump</div>
+                        <div class="postsCount text-white font-extralight text-sm">12k posts</div>
+                    </li>
+
+                    <li class="w-fit hover:bg-neutral-900 cursor-pointer px-3 py-1 rounded-3xl">
+                        <div class="title text-white font-medium">#CIA</div>
+                        <div class="postsCount text-white font-extralight text-sm">10k posts</div>
+                    </li>
+                </ul>
+            </div>
+            <div
+                class="followContainer flex flex-col border-1 border-gray-600 h-fit w-fit p-5 pt-2 rounded-2xl justify-center pl-5 gap-4">
+                <h1 class="text-lg font-bold text-white">Who to follow</h1>
+                <ul class="flex flex-col gap-1">
+                    <li
+                        class="flex flex-row hover:bg-neutral-900 cursor-pointer px-3 py-1 rounded-lg justify-between w-[19vw]">
+                        <div class="title text-white text-base font-medium">Cristiano Ronaldo</div>
+                        <div id="followBtn"
+                            class="followBtn text-black text-sm font-bold w-fit px-3 py-1 bg-white rounded-full hover:bg-neutral-200 cursor-pointer">
+                            Follow</div>
+
+                        <div id="unfollowBtn"
+                            class="hidden unfollowBtn text-black text-sm font-semibold w-fit px-3 py-1 bg-white rounded-full hover:bg-red-400/50 hover:text-red-500 hover:border-1 hover:border-red-500 cursor-pointer">
+                            Unfollow</div>
+                    </li>
+
+                    <li
+                        class="flex flex-row justify-between w-[19vw] hover:bg-neutral-900 cursor-pointer px-3 py-1 rounded-lg">
+                        <div class="title text-white font-medium">Charlie Kirk</div>
+                        <div id="followBtn"
+                            class="followBtn text-black text-sm font-bold w-fit px-3 py-1 bg-white rounded-full hover:bg-neutral-200 cursor-pointer">
+                            Follow</div>
+
+                        <div id="unfollowBtn"
+                            class="hidden unfollowBtn text-black text-sm font-semibold w-fit px-3 py-1 bg-white rounded-full hover:bg-red-400/50 hover:text-red-500 hover:border-1 hover:border-red-500 cursor-pointer">
+                            Unfollow</div>
+                    </li>
+
+                    <li
+                        class="flex flex-row justify-between w-[19vw] hover:bg-neutral-900 cursor-pointer px-3 py-1 rounded-lg">
+                        <div class="title text-white font-medium">Trump</div>
+                        <div id="followBtn"
+                            class="followBtn text-black text-sm font-bold w-fit px-3 py-1 bg-white rounded-full hover:bg-neutral-200 cursor-pointer">
+                            Follow</div>
+
+                        <div id="unfollowBtn"
+                            class="hidden unfollowBtn text-black text-sm font-semibold w-fit px-3 py-1 bg-white rounded-full hover:bg-red-400/50 hover:text-red-500 hover:border-1 hover:border-red-500 cursor-pointer">
+                            Unfollow</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="footers flex flex-col gap-1">
+                <ul class="flex text-white gap-2 text-[10px]">
+                    <li class="cursor-pointer hover:underline">
+                        Terms of Service
+                    </li>
+                    <li>|</li>
+                    <li class="cursor-pointer hover:underline">
+                        Privacy Policy
+                    </li>
+                    <li>|</li>
+                    <li class="cursor-pointer hover:underline">
+                        Cookie Policy
+                    </li>
+                </ul>
+                <ul class="flex text-white gap-2 text-[10px]">
+                    <li class="cursor-pointer hover:underline">Accessibility</li>
+                    <li>|</li>
+                    <li class="cursor-pointer hover:underline">Ads info</li>
+                    <li>|</li>
+                    <li class="cursor-pointer hover:underline">More</li>
+                    <li>|</li>
+                    <li class="">© 2025 X Corp.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
